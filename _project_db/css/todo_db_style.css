@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+	--blue:#52bfff;
+	--white-ish:#d8effd;
+}
+
+body {
+    background-color: var(--blue);
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1, h2{
+    line-height: .9;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1{
+    font-weight: 900;
+    /* font-size: 7em; */
+    font-size: clamp(5rem, 6rem, 7rem);
+    margin: 40px 0 20px;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+input{
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: clamp(1rem, 1.2rem, 1.5em);
+    font-weight: 400;
+    text-align: center;
+    color: magenta;
+}
+
+::placeholder{
+    color: magenta;
+    text-transform: uppercase;
+}
+
+article{
+    display:grid;
+	grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+	grid-gap: .5rem;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background: white;
+    word-break: wrap;
+    margin-bottom: 1rem;
+}
+
+p{
+    font-size: clamp(1rem, 1.2rem, 1.5rem);
+    font-weight: 300;
+}
+
+p::first-letter{text-transform: uppercase;}
+
+i{font-size: 1.2rem;}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form {
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-fields{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 10px;
+}
+
+.list .arrow, .btn-add i{
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.list{
+    display: grid;
+    grid-gap: .5rem;
+    align-items: center;
+}
+
+.btn-add{
+    min-width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn-add i{ line-height: 60px; }
+
+.btn-delete, .btn-edit{
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.btn-add, .btn-delete, .btn-edit{
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+
+.btn-add:hover, .btn-add:focus{
+    background-color: white;
+    color: black;
+}
+
+.btn-edit:hover, .btn-edit:focus{background-color: yellowgreen;}
+
+.btn-delete:hover, .btn-delete:focus{ background-color: magenta; }
+
+.error{
+    display: none;
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 100px;
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
