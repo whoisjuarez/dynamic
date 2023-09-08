@@ -3,7 +3,7 @@
     require_once '_includes/todo_db_connect.php';
 
     // prepare statement passing the db $link and the sql
-    $stmt = mysqli_prepare($link, 'SELECT item, timestamp FROM todo ORDER BY timestamp DESC'); //'todo'is the table name, not the db --- 'ASC' from oldest to newest | 'DESC' from newest to oldest
+    $stmt = mysqli_prepare($link, 'SELECT * FROM todo ORDER BY timestamp DESC'); //'todo'is the table name, not the db --- 'ASC' from oldest to newest | 'DESC' from newest to oldest
 
     // execute the statement/query from table
     mysqli_stmt_execute($stmt);
@@ -22,3 +22,4 @@
 
     // close the connection to the db
     mysqli_close($link);
+?>
