@@ -23,8 +23,8 @@ h1, h2{
 h1{
     font-weight: 900;
     /* font-size: 7em; */
-    font-size: clamp(5rem, 6rem, 7rem);
-    margin: 40px 0 20px;
+    font-size: clamp(5rem, 7rem, 7rem);
+    margin-bottom: 20px;
 }
 
 h2{
@@ -59,7 +59,7 @@ article{
     border-radius: 50px;
     background: white;
     word-break: wrap;
-    margin-bottom: 1rem;
+    margin: 20px 0 20px 0;
 }
 
 p{
@@ -77,9 +77,19 @@ i{font-size: 1.2rem;}
     margin: 0 auto;
 }
 
+.intro{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--blue);
+    /* border-bottom: 3px solid black; */
+    /* box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5); */
+    padding: 40px 0 20px;
+}
+
 .form {
     align-items: center;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .form-fields{
@@ -88,7 +98,11 @@ i{font-size: 1.2rem;}
     grid-gap: 10px;
 }
 
-.list .arrow, .btn-add i{
+#add_form{ display: grid; }
+
+#edit_form{ display: none; }
+
+.list .arrow, .btn-add, .btn-update i{
     font-size: 1.5rem;
     line-height: 1.2;
 }
@@ -97,9 +111,10 @@ i{font-size: 1.2rem;}
     display: grid;
     grid-gap: .5rem;
     align-items: center;
+    padding: 20px 0;
 }
 
-.btn-add{
+.btn-add, .btn-update {
     min-width: 60px;
     height: 60px;
     border: none;
@@ -109,9 +124,12 @@ i{font-size: 1.2rem;}
     text-transform: uppercase;
 }
 
-.btn-add i{ line-height: 60px; }
+.btn-add, .btn-update i{ line-height: 60px; }
 
-.btn-delete, .btn-edit{
+.btn-delete, 
+.btn-edit, 
+.btn-check-no, 
+.btn-check-yes{
     min-width: 40px;
     height: 40px;
     line-height: 40px;
@@ -120,24 +138,56 @@ i{font-size: 1.2rem;}
     border-radius: 50%;
 }
 
-.btn-add, .btn-delete, .btn-edit{
+.btn-check-no i, .btn-check-yes i {
+    font-size: 1.25rem;
+    line-height: 40px;
+}
+
+.btn-add, 
+.btn-update, 
+.btn-delete, 
+.btn-edit, 
+.btn-check-no, 
+.btn-check-yes{
     transition: 0.2s ease-in-out;
     cursor: pointer;
     display: block;
     text-align: center;
 }
 
-.btn-add:hover, .btn-add:focus{
+.btn-add:hover, 
+.btn-add:focus, 
+.btn-update:hover, 
+.btn-update:focus,
+.btn-check-no:focus,
+.btn-check-yes:focus{
     background-color: white;
     color: black;
 }
 
-.btn-edit:hover, .btn-edit:focus{background-color: yellowgreen;}
+.btn-edit:hover, .btn-edit:focus{background-color: #f3ca00;}
 
-.btn-delete:hover, .btn-delete:focus{ background-color: magenta; }
+.btn-delete:hover, .btn-delete:focus{ background-color: #f73b3b; }
+
+.btn-check-no:hover, .btn-check-no:focus{ background-color: #3bd980; }
+
+.btn-check-yes:hover, .btn-check-yes:focus{ background-color: #ffffff; }
+
+.btn-check-no{
+    display: block;
+}
+
+.btn-check-yes{
+    display: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    /* color: white; */
+}
 
 .error{
-    display: none;
+    display: block;
     width: 100%;
     padding: 15px 30px;
     border-radius: 100px;
@@ -147,5 +197,5 @@ i{font-size: 1.2rem;}
     font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
