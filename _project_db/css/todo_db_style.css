@@ -7,6 +7,8 @@
 :root {
 	--blue:#52bfff;
 	--white-ish:#d8effd;
+   --yellow: #f3ca00;
+   --red: #f73b3b;
 }
 
 body {
@@ -33,6 +35,8 @@ h2{
    margin-bottom: 20px;
 }
 
+a, button{ cursor: pointer; }
+
 input{
    width: 100%;
    height: 60px;
@@ -43,6 +47,11 @@ input{
    font-weight: 400;
    text-align: center;
    color: magenta;
+}
+
+#edit_form input{
+   background-color: var(--yellow);
+   color: black
 }
 
 ::placeholder{
@@ -155,9 +164,9 @@ i{font-size: 1.2rem;}
    color: black;
 }
 
-.btn-edit:hover, .btn-edit:focus{background-color: #f3ca00;}
+.btn-edit:hover, .btn-edit:focus{background-color: var(--yellow);}
 
-.btn-delete:hover, .btn-delete:focus{ background-color: #f73b3b; }
+.btn-delete:hover, .btn-delete:focus{ background-color: var(--red); }
 
 .github-msg{
    display: block;
@@ -170,5 +179,4 @@ i{font-size: 1.2rem;}
    font-weight: 400;
    text-align: center;
    margin-bottom: 20px;
-   /* vertical-align: middle; */
 }
