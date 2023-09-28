@@ -63,23 +63,23 @@
 
 # File structure:
 ## _project_db_v2
-		• index.html
-		• todolist.html
+	• index.html
+	• todolist.html
 ## app/
-			• _includes/
-				• todo_db_connect.php
-			• todo_db_completed.php
-			• todo_db_delete.php
-			• todo_db_edit.php
-			• todo_db_insert.php
-			• todo_db_login.php
-			• todo_db_logout.php
-			• todo_db_select.php
-			• todo_db_signup.php
+	• _includes/
+		• todo_db_connect.php
+	• todo_db_completed.php
+	• todo_db_delete.php
+	• todo_db_edit.php
+	• todo_db_insert.php
+	• todo_db_login.php
+	• todo_db_logout.php
+	• todo_db_select.php
+	• todo_db_signup.php
 ### css/
-			• todo_db_btn_style.css
-			• todo_v2_db_style.css
+	• todo_db_btn_style.css
+	• todo_v2_db_style.css
 ### js/
-			• todo_db_login-logout.js
-			• todo_v2_db.js
-			• todo_db_signup.js
+	• todo_db_login-logout.js
+	• todo_v2_db.js
+	• todo_db_signup.js
