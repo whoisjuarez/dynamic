@@ -39,9 +39,9 @@
 	• Refresh display / select (app/todo_db_select.php)
 
 ## Check item completed (app/todo_db_completed.php):
-		• Button change from box to checked box
-		• Button change colour
-		• Item text showed with line-through effect
+	• Button change from box to checked box
+	• Button change colour
+	• Item text showed with line-through effect
 
 ## Edit item (app/todo_db_edit.php)
 	• Hide form to add item
