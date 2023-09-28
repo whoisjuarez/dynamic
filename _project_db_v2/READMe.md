@@ -1,11 +1,11 @@
 # Database:
-	## Users
+## Users
 	• id
 	• name
 	• email
 	• password
 
-	## List
+## List
 	• id
 	• item
 	• user id
@@ -62,11 +62,11 @@
 	• load form to sign in (index.html)
 
 # File structure:
-	## _project_db_v2
+## _project_db_v2
 		• index.html
 		• todolist.html
-		• app/
-			### _includes/
+## app/
+### _includes/
 				• todo_db_connect.php
 			• todo_db_completed.php
 			• todo_db_delete.php
@@ -76,10 +76,10 @@
 			• todo_db_logout.php
 			• todo_db_select.php
 			• todo_db_signup.php
-		### css/
+### css/
 			• todo_db_btn_style.css
 			• todo_v2_db_style.css
-		### js/
+### js/
 			• todo_db_login-logout.js
 			• todo_v2_db.js
 			• todo_db_signup.js
