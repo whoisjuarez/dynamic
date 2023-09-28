@@ -30,7 +30,7 @@
 
 ## Sign up 
 • Load form to register (index.html)
-• Insert user (app/todo_db_signup)
+• Insert user (app/todo_db_signup):
 	• If successful, show message
 	• Load login form
 
@@ -45,7 +45,7 @@
 
 ## Edit item (app/todo_db_edit.php)
 • Hide form to add item
-• Show form to edit item
+• Show form to edit item:
 	• Form same colour as the button
 	• Refresh display / select (app/todo_db_select.php)
 
