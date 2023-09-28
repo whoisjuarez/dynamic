@@ -66,7 +66,7 @@
 		• index.html
 		• todolist.html
 ## app/
-### _includes/
+			• _includes/
 				• todo_db_connect.php
 			• todo_db_completed.php
 			• todo_db_delete.php
