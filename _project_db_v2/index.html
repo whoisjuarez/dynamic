@@ -1,47 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Maybe later? - DB Project - André Cardoso</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maybe Later?</title>
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet" />
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/2f6fae777f.js"
+      crossorigin="anonymous"></script>
 
-      <link rel="stylesheet" href="css/todo_db_style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/todo_v2_db_style.css" />
 
-      <script src="js/todo_db.js" defer></script>
+    <!-- JS -->
+    <script src="js/todo_db_login-logout.js" defer></script>
+    <script src="js/todo_db_signup.js" defer></script>
+  </head>
 
-   </head>
+  <body>
+    <main>
+      <section class="intro_login_sigup grid">
+        <figure class="container">
+          <h1>Maybe later?</h1>
+          <p class="confirmation">Successfully Signed Up <i class="fa-regular fa-thumbs-up"></i></p>
+          <h2 id="login-title">Login</h2>
+          <h2 id="signup-title">Sign up</h2>
+        </figure>
 
-   <body>
-      <main>
-         <section class="intro">
-            <figure class="container">
-               <h1>maybe later?</h1>
-               <h2>Give me something to do</h2>
-               <a href="https://github.com/whoisjuarez/dynamic/tree/main/_project_db" target="_blank" class="github-msg">GitHub repository</a>
-            </figure>
+        <!-- Login -->
+        <figure class="login-signup form">
+          <div class="container">
+            <form id="login-form" class="form-fields">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email address">
 
-            <figure id="add-update" class="form">
-               <div class="container">
-                  <form id="add_form" class="form-fields">
-                     <input id="form_field" name="item" type="text" placeholder="Enter an activity">
-                     <button? id="add_btn" class="btn-add" type="submit"><i class="fa-solid fa-plus"></i></button?>
-                  </form>
-   
-                  <form id="edit_form" class="form-fields">
-                     <input id="edit_form_field" name="edit-item" type="text">
-                     <button? id="save_btn" class="btn-update" type="submit"><i class="fa-solid fa-check"></i></button?>
-                  </form>
-               </div>
-            </figure>
-         </section>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password">
 
-         <section class="list"></section>
-      </main>
-   </body>
+                <button class="btn-login">
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+
+                <p class="signup_link">
+                  Don't have an account? <i class="fa-solid fa-arrow-right-long"></i> <a class="btn_signup_link">Sign Up</a>
+                </p>
+            </form>
+
+            <!-- Signup -->
+            <form id="signup-form" class="form-fields" method="post" novalidate>
+              <input
+                type="text"
+                name="name_signup"
+                id="name_signup"
+                placeholder="Your name">
+
+              <input
+                  type="email"
+                  name="email_signup"
+                  id="email_signup"
+                  placeholder="Email address">
+
+              <input
+                type="password"
+                name="password_signup"
+                id="password_signup"
+                placeholder="Password">
+
+                <input
+                type="password"
+                name="password_confirmation"
+                id="password_confirmation"
+                placeholder="Confirm password">
+
+                <button class="btn-signup">
+                  <i class="fa-solid fa-user-plus"></i>
+                </button>
+
+                <p class="login_link">
+                  Already have an account? <i class="fa-solid fa-arrow-right-long"></i> <a class="btn_login_link"> Log In</a>
+                </p>
+            </form>
+          </div>
+        </figure>
+      </section>
+    </main>
+  </body>
 </html>
