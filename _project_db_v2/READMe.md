@@ -22,17 +22,16 @@
 # Js:
 ## Login
 • Login form
-• Check php (app/todo_db_login.php) session to check 
-  if users are logged in:
+• Check php (app/todo_db_login.php) session to check if users are logged in:
 	• Yes -> load items
 	• No -> load form to login (index.html)
-• If user don't exist, sign up
+ • If user don't exist, sign up
 
 ## Sign up 
 • Load form to register (index.html)
 • Insert user (app/todo_db_signup):
 	• If successful, show message
-	• Load login form
+ 	• Load login form
 
 ## Insert item (app/todo_db_insert.php):
 • Type new item into form 
@@ -47,7 +46,7 @@
 • Hide form to add item
 • Show form to edit item:
 	• Form same colour as the button
-	• Refresh display / select (app/todo_db_select.php)
+ 	• Refresh display / select (app/todo_db_select.php)
 
 ## Delete item (app/todo_db_delete.php)
 • Delete item from database
