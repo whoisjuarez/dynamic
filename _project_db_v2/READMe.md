@@ -54,9 +54,9 @@
 	• Refresh display / select (app/todo_db_select.php)
 
 ## Filter items
-	• Button to show all items 
-	• Button to show completed items
-	• Button to show pending items
+• Button to show all items 
+• Button to show completed items
+• Button to show pending items
 
 ## Log out (app/todo_db_logout.php)
 	• load form to sign in (index.html)
