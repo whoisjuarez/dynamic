@@ -12,10 +12,10 @@ const fetchItems = async (url) => {
   }
 }
 
-fetchItems('app/todo_db_select.php');
+fetchItems('app/todo_v2_db_select.php');
 
 // Show pending items
-let pendingItems = false; // Variable to track state of button (false = show all, true = show pending)
+let pendingItems = false; // false = show all, true = show pending
 const showPending = document.getElementById("show_pending");
 showPending.addEventListener("click", () => {
    //filter -> returns a new array with the elements that pass the condition
@@ -34,6 +34,22 @@ showChecked.addEventListener("click", () => {
 // Show all items
 const showAll = document.getElementById("show_all");
 showAll.addEventListener("click", () => { displayItems(listData); });
+
+// Order items by timestamp
+let oldFirst = true; // Initialize the flag
+const orderAll = document.getElementById("order_all");
+orderAll.addEventListener("click", () => {
+   // Toggle the flag before sorting
+   oldFirst = !oldFirst;
+   if (oldFirst) {
+      // Descending
+      listData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+   } else {
+      // Ascending
+      listData.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+   }
+   displayItems(listData);
+});
 
 /**
  * Display items
@@ -118,7 +134,7 @@ const addItem = async (data, addUrl) => {
    if (addRes.status === 200) {
       console.log("Successfully added!");
       addForm.reset();
-      fetchItems("app/todo_db_select.php");
+      fetchItems("app/todo_v2_db_select.php");
    } else {
        console.log("Failed to add.");
    }
@@ -134,7 +150,7 @@ function checkFormData(e) {
    const checkedFormData = new FormData();
    checkedFormData.append('todoID', element.dataset.id);
 
-   let url = 'app/todo_db_completed.php';
+   let url = 'app/todo_v2_db_completed.php';
    addItem(checkedFormData, url);
 }
 
@@ -188,7 +204,7 @@ const saveEditedItem = async (itemId, editUrl) => {
       addForm.style.display = 'grid'; 
       editForm.style.display = 'none'; 
 
-      fetchItems('app/todo_db_select.php');
+      fetchItems('app/todo_v2_db_select.php');
    } else {
       console.log('Failed to update.');
    }
@@ -218,7 +234,7 @@ const deleteItem = async (data, deleteUrl) => {
    
    if (deleteRes.status === 200) {
       console.log("Successfully deleted!");
-      fetchItems("app/todo_db_select.php");
+      fetchItems("app/todo_v2_db_select.php");
    } else {
        console.log("Failed to delete.");
    }
