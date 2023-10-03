@@ -24,7 +24,7 @@
 }
 
 .btn-add, .btn-update, .btn-login, .btn-signup,
-#show_pending, #show_checked, #show_all {
+#show_pending, #show_checked, #show_all, #order_all {
    width: 60px;
    height: 60px;
    border: none;
@@ -34,17 +34,20 @@
    text-transform: uppercase;
 }
 
+#order_all i{ transform: rotate(90deg);}
+
 .btn-add i, .btn-update i, .btn-login i, 
 .btn-signup i{ line-height: 60px; }
 
 .btn-selection{
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-around;
    gap: 50px;
 }
 
-#show_pending, #show_checked, #show_all{
+#show_pending, #show_checked, 
+#show_all, #order_all{
    min-width: 80px;
    height: 40px;
    border-radius: 50px;
@@ -74,7 +77,8 @@
 .btn-signup:hover, .btn-signup:focus,
 #show_pending:hover, #show_checked:hover, 
 #show_all:hover, #show_pending:focus, 
-#show_checked:focus, #show_all:focus{
+#show_checked:focus, #show_all:focus,
+#order_all:hover, #order_all:focus{
    background-color: white;
    color: black;
 }

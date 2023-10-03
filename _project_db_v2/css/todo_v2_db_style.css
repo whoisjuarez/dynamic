@@ -236,14 +236,15 @@ i{font-size: 1.2rem;}
       height: 50px;
       padding: 20px;
    }
+
+   .btn-selection{
+      gap: 10px;
+   }
+
+
 }
 
-/*  */
-/*  */
-/* Delete after */
-/*  */
-/*  */
-
+/* presentation temp page */
 .item_desc a{
    color: black;
 }
